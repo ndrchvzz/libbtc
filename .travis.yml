@@ -29,6 +29,10 @@ before_install:
 matrix:
     fast_finish:
         - true
+    include:
+      - os: linux
+        compiler: gcc
+        env: CFLAGS+="-funsigned-char"
     exclude:
       - os: osx
         compiler: x86_64-w64-mingw32-gcc
